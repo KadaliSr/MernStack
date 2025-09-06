@@ -1,6 +1,6 @@
 const um=require( '../models/usermodel')
 const nodemailer =require('nodemailer')
-const bcrypt=require('bcrypt')
+const bcrypt=require('bcryptjs')
 const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
