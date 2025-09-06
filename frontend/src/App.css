@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow-x: hidden;
+}
+.nav{
+    width:100vw;
+    background-color: black;
+    color:white;
+    display:flex;
+    justify-content: space-evenly; 
+    
+}
+.nav a{
+    text-decoration:none ;
+    color:white ;
+}
+.cardcon{
+  width: 100vw;
+  background-color:white;
+  color:black;
+  display: flex;
+  justify-content:space-evenly ;
+  flex-wrap: wrap;
+  margin:4px;
+}
+.card{
+  width: 30vw;
+  background-color:black;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly ;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 0 4px black;
+  padding:4px;
+  margin:4px ;
+  box-sizing: border-box;
+  text-align: center;
+}
+.card img{
+    width:100px;
+    height:100px ;
+}
+.card button{
+    border:none ;
+    border-radius:2px ;
+    width:10vw;
+    height:25px;
+    box-shadow: 0 0 2px white;
+    font-weight: bold;
+    display:inline-block
+    
+}
+.cardtotal{
+    width: 30vw;
+    background-color:black;
+    color:white;
+    position:fixed;
+    bottom:0px ;
+    left:40%;
+    text-align: center;
+     border-radius: 4px;
+    box-shadow: 0 0 4px black;
+
+}
+.pbutton{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+.alert{
+  width:20%;
+  height: 40px;
+  background-color:black;
+  color:white;
+  position: fixed;
+  top:0px;
+  left:40%;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  padding:0px 55px;
+  box-sizing: border-box;
+}
+.regcon,.logincon,.addprodcon{
+    width:100vw;
+    background-color:white ;
+    display: flex;
+    justify-content: center;
+    margin: 10% 5%;
+
+}
+.reg,.login,.addprod{
+    width:40vw;
+    padding:5% 5%;
+    background-color: black;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    gap:10px;
+    align-items: center; 
+    border-radius:4px ;
+    box-shadow:0 0 4px black ;
+
+
+}
+.form{
+  width:20vw;
+  display:block; 
+  font-style: oblique;
+  font-weight:bold ;
+  color:white; 
+  padding:2% 2%;  
+ /* box-shadow:0 0 4px black; */
+ /* border-radius:4px; */
+  border:none;
+  border-bottom:2px solid white ;
+  background-color:transparent;
+}
