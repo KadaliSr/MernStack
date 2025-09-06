@@ -1,5 +1,5 @@
 const um=require('../models/usermodel')
-let bcrypt =require( 'bcrypt')
+let bcrypt =require( 'bcryptjs')
 let jwt=require('jsonwebtoken')
 let adduser=async(req,res)=>{
     try{
