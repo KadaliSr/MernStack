@@ -16,7 +16,7 @@ const Cart = () => {
         {
            x=JSON.parse(x)
            obj.stateupd(x)
-           axios.get(`http://localhost:5000/getcart/${obj.state.uid}`).then((res)=>{
+           axios.get(`https://mernstack-backend-lixd.onrender.com/getcart/${obj.state.uid}`).then((res)=>{
             let t= 0
             for(let cobj of res.data){
                t=t+cobj.qty*cobj.price
@@ -32,19 +32,19 @@ const Cart = () => {
         }
   },[f])
   let delcart=(cid)=>{
-      axios.get(`http://localhost:5000/del/${cid}`).then(()=>{
+      axios.get(`https://mernstack-backend-lixd.onrender.com/del/${cid}`).then(()=>{
       setF(!f)
     })
 
   }
   let incqty=(cid)=>{
-      axios.get(`http://localhost:5000/inc/${cid}`).then(()=>{
+      axios.get(`https://mernstack-backend-lixd.onrender.com/inc/${cid}`).then(()=>{
       setF(!f)
       })
     }
   let decqty=(cid,qty)=>{
      if(qty>1){
-       axios.get(`http://localhost:5000/dec/${cid}`).then(()=>{
+       axios.get(`https://mernstack-backend-lixd.onrender.com/dec/${cid}`).then(()=>{
        setF(!f)
        })
      }
