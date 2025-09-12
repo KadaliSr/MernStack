@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-  origin: "*",  
+  origin: "https://mernstack-frontend-as5n.onrender.com",  
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
