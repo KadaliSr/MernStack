@@ -11,7 +11,7 @@ const Resetpwd = () => {
     setUid(e.target.value)
   }
   let sendotp=()=>{
-    axios.get(`http://localhost:5000/sendotp/${uid}`).then((res)=>{
+    axios.get(`https://mernstack-backend-lixd.onrender.com/sendotp/${uid}`).then((res)=>{
       if(res.data.msg ==="otp sent")
       {
         navigate(`/updpwd/${uid}`)
