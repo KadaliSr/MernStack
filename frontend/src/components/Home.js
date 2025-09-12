@@ -8,7 +8,7 @@ const Home = () => {
     let navigate=useNavigate()
     let [f,setF]=useState(false)
     useEffect(()=>{
-        axios.get("http://localhost:5000/prod").then((res)=>{
+        axios.get("https://mernstack-backend-lixd.onrender.com/prod").then((res)=>{
             setProd(res.data)
         })
     },[])
@@ -17,7 +17,7 @@ let addcart=(pobj)=>{
         navigate("/login")
       }
       else{
-        axios.post("http://localhost:5000/addcart",{
+        axios.post("https://mernstack-backend-lixd.onrender.com/addcart",{
           "uid":obj.state.uid,
           "pid":pobj._id,
           "name":pobj.name,
