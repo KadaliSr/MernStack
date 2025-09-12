@@ -40,7 +40,7 @@ const Addprod = () => {
           fd.append(p,data[p])
       }
       fd.append("rid",uid)
-      axios.post("http://localhost:5000/addprod",fd,{"headers":{"Authorization":obj.state.token,"uid":obj.state.uid}}).then((res)=>{
+      axios.post("https://mernstack-backend-lixd.onrender.com/addprod",fd,{"headers":{"Authorization":obj.state.token,"uid":obj.state.uid}}).then((res)=>{
        if(res.data.err!=undefined)
       {
         setMsg(res.data.err)
