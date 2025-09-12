@@ -19,7 +19,7 @@ const Login = () => {
    }
    let login=(e)=>{
       e.preventDefault()
-      axios.post("http://localhost:5000/login",data).then((res)=>{
+      axios.post("https://mernstack-backend-lixd.onrender.com/login",data).then((res)=>{
       if(res.data.token != undefined){
          Cookies.set("lc",JSON.stringify(res.data))
          obj.stateupd(res.data)
