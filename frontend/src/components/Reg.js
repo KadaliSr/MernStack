@@ -11,7 +11,7 @@ const Reg = () => {
   }
   let reg=(e)=>{
       e.preventDefault()
-      axios.post("http://localhost:5000/reg",data).then((res)=>{
+      axios.post("https://mernstack-backend-lixd.onrender.com/reg",data).then((res)=>{
         setMsg(res.data.msg)
         setData({"_id":"","name":"","pwd":"","role":""})
          navigate("/login")
