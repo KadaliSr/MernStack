@@ -11,7 +11,7 @@ const Updpwd = () => {
     setData({...data,[e.target.name]:e.target.value})
   }
   let resetpwd=()=>{
-    axios.post("http://localhost:5000/resetpwd",{...data,"uid":uid}).then(()=>{
+    axios.post("https://mernstack-backend-lixd.onrender.com/resetpwd",{...data,"uid":uid}).then(()=>{
       navigate("/login")
     }).catch((err)=>{
 
