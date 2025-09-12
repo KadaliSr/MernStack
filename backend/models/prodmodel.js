@@ -7,7 +7,8 @@ let psch=new mongoose.Schema({
     "price":Number,
     "pimg":String,
     "rid":String,
-    "comm":[]
+    "comm":[],
+  "public_id": String,
 })
 let pm=mongoose.model("prod",psch)
 module.exports=pm

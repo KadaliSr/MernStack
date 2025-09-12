@@ -8,7 +8,8 @@ rt.post("/reg",adduser)
 rt.post("/login",login)
 rt.get("/sendotp/:uid",sendotp)
 rt.post("/resetpwd",resetpwd)
-rt.post("/addprod",upload.single('pimg'),addprod,islogin,isadmin)
+rt.post("/addprod", islogin, isadmin, upload.single("pimg"), addprod);
+
 rt.get("/prod",prod)
 
 rt.post("/addcart",addcart)

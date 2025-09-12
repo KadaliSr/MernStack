@@ -27,7 +27,7 @@ setF(!f)
     }
   return (<>
    {prod !="" &&<div className='card'>
-         <img src={`http://localhost:5000/prodimgs/${prod.pimg}`}  alt="prodimg" />
+         <img src={prod.pimg}  alt="prodimg" />
         <p>Name:{prod.name}</p>
         <p>Desc:{prod.desc}</p>
         <p>Price:{prod.price}</p>

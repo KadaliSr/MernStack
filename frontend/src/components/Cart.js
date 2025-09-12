@@ -57,7 +57,7 @@ const Cart = () => {
             data.map((pobj)=>{
               return(
                       <div className='card'>
-                           <img src={`http://localhost:5000/prodimgs/${pobj.pimg}`}  alt="prodimg" /> 
+                           <img src={pobj.pimg}  alt="prodimg" /> 
                            <h3>{pobj.name}</h3><br></br>
                            <h5>₹{pobj.price.toLocaleString("en-IN")}</h5>
                           <p className='pbutton'><button onClick={()=>decqty(pobj._id,pobj.qty)}>-</button>{pobj.qty}<button onClick={()=>incqty(pobj._id)}>+</button></p>

@@ -40,7 +40,7 @@ let addcart=(pobj)=>{
           prod.map((pobj)=>{
             return(
                     <div className='card'>
-                           <img src={`http://localhost:5000/prodimgs/${pobj.pimg}`}  alt="prodimg" /> 
+                           <img src={pobj.pimg}  alt="prodimg" /> 
                            <h3>{pobj.name}</h3><br></br>
                            <h5>₹{pobj.price.toLocaleString("en-IN")}</h5><br></br>
                            <p>{pobj.desc}</p><br></br>

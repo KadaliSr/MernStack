@@ -38,7 +38,7 @@ let edit=(pobj)=>{
             prod.map((pobj)=>{
                 return(
                     <div class="card">
-                       <img src={`http://localhost:5000/prodimgs/${pobj.pimg}`}  alt="prodimg"/>
+                       <img src={pobj.pimg}  alt="prodimg"/>
                        <h5 >{pobj.name}</h5>
                        <h5 >{pobj.Price}</h5>
                        <p>{pobj.desc}</p>
