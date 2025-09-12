@@ -14,14 +14,14 @@ useEffect(()=>{
     }
     else{
         x=JSON.parse(x)
-    axios.get(`http://localhost:5000/getbyrt/${x.uid}`).then((res)=>{
+    axios.get(`https://mernstack-backend-lixd.onrender.com/getbyrt/${x.uid}`).then((res)=>{
         setProd(res.data)
     })
     }
 
 },[f])
 let del=(pid)=>{
-    axios.delete(`http://localhost:5000/del/${pid}`).then(()=>{
+    axios.delete(`https://mernstack-backend-lixd.onrender.com/del/${pid}`).then(()=>{
         setF(!f)
     })
 }
