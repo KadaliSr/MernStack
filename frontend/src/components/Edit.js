@@ -23,7 +23,7 @@ const Edit = () => {
 
     },[])
     let upd=()=>{
-        axios.put("http://localhost:5000/upd",data).then((res)=>{
+        axios.put("https://mernstack-backend-lixd.onrender.com/upd",data).then((res)=>{
             setMsg(res.data.msg)
 
         })
@@ -35,7 +35,7 @@ const Edit = () => {
       let fd=new FormData()
       fd.append("_id",data._id)
       fd.append("pimg",file)
-      axios.post("http://localhost:5000/updimg",fd).then((res)=>{
+      axios.post("https://mernstack-backend-lixd.onrender.com/updimg",fd).then((res)=>{
         setMsg(res.data.msg)
 
       })
