@@ -14,14 +14,14 @@ const Cm = () => {
   let ipt=useRef()
     let obj=useContext(Ct)
     useEffect(()=>{
-        axios.get(`http://localhost:5000/getbyid/${pid}`).then((res)=>{
+        axios.get(`https://mernstack-backend-lixd.onrender.com/getbyid/${pid}`).then((res)=>{
             setProd(res.data)
         }).catch((err)=>{
             setProd(err)
         })
     },[f,pid])
     let add=()=>{
-        axios.put("http://localhost:5000/addcomm",{"pid":pid,"name":obj.state.name,"text":ipt.current.value,"rt":value}).then((res)=>{
+        axios.put("https://mernstack-backend-lixd.onrender.com/addcomm",{"pid":pid,"name":obj.state.name,"text":ipt.current.value,"rt":value}).then((res)=>{
 setF(!f)
         })
     }
