@@ -42,7 +42,7 @@ app.use("/", rt);
   app.get("/", (req, res) => {
     res.send("API is running...");
   });
-}
+
 
 // ------------------- Start Server -------------------
 app.listen(myObject.PORT, () => {
