@@ -2,6 +2,7 @@ let express = require('express');
 let mongoose = require('mongoose');
 let rt = require('./routes/route.js');
 let cors = require("cors");
+let path = require("path");
 require("dotenv").config();
 
 const myObject = {
