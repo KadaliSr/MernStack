@@ -39,18 +39,6 @@ app.use(cors({
 app.use("/", rt);
 
 // ------------------- SERVE FRONTEND -------------------
-const __dirname1 = path.resolve();
-
-if (process.env.NODE_ENV === "production") {
-  // Serve frontend build folder
-  app.use(express.static(path.join(__dirname1, "/frontend/build")));
-
-  // Serve index.html for all unknown routes
-  app.get((req, res) =>
-    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"));
-  );
-} else {
-  // For development, simple API response
   app.get("/", (req, res) => {
     res.send("API is running...");
   });
