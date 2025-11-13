@@ -14,6 +14,7 @@ const customer = { processENV: myObject };
 
 console.log("Customer object running in code:", customer);
 
+// ------------------- MongoDB Connection -------------------
 
 mongoose.connect(myObject.DB_URL, {
   useNewUrlParser: true,
@@ -22,6 +23,7 @@ mongoose.connect(myObject.DB_URL, {
 .then(() => console.log("Connected to MongoDB Atlas"))
 .catch(err => console.error(" DB Connection Error:", err));
 
+// ------------------- Express Setup -------------------
 let app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -32,8 +34,28 @@ app.use(cors({
   credentials: true
 }));
 
+// ------------------- API Routes -------------------
 app.use("/", rt);
 
+// ------------------- SERVE FRONTEND -------------------
+const __dirname1 = path.resolve();
+
+if (process.env.NODE_ENV === "production") {
+  // Serve frontend build folder
+  app.use(express.static(path.join(__dirname1, "/frontend/build")));
+
+  // Serve index.html for all unknown routes
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
+  );
+} else {
+  // For development, simple API response
+  app.get("/", (req, res) => {
+    res.send("API is running...");
+  });
+}
+
+// ------------------- Start Server -------------------
 app.listen(myObject.PORT, () => {
   console.log(`Server running on port ${myObject.PORT}`)
 
