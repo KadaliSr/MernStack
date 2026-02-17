@@ -41,7 +41,7 @@ const Addprod = () => {
       }
       fd.append("rid",uid)
       axios.post("https://mernstack-backend-lixd.onrender.com/addprod",fd,{"headers":{"Authorization":obj.state.token,"uid":obj.state.uid}}).then((res)=>{
-       if(res.data.err!=undefined)
+       if(res.data.err)
       {
         setMsg(res.data.err)
       }
