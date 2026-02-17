@@ -49,9 +49,7 @@ app.listen(myObject.PORT, () => {
   console.log(`Server running on port ${myObject.PORT}`)
 
 });
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "build", "index.html"));
-});
+
 
 
 
